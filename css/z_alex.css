@@ -1,0 +1,354 @@
+/*animated scroll arrow animation*/
+@-webkit-keyframes move_down {
+  0% {
+    -webkit-transform: translate(0, 0px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(0, 25px);
+    opacity: 0;
+  }
+}
+@-moz-keyframes move_down {
+  0% {
+    -moz-transform: translate(0, 0px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: translate(0, 25px);
+    opacity: 0;
+  }
+}
+@keyframes move_down {
+  0% {
+    transform: translate(0, 0px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 25px);
+    opacity: 0;
+  }
+}
+body{
+  font-family:'Montserrat'!important;
+}
+h1, h2, h3{font-family: "Balsamiq sans"!important;}
+.move_down {
+  background-color: --main-color;
+  position: relative;
+  width: 65px;
+  padding: 0;
+  height: 65px;
+}
+
+.move_down:before {
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  content: "\f282";
+  font-size: 28px;
+  -webkit-animation: move_down 2s ease-in-out infinite;
+  -moz-animation: move_down 2s ease-in-out infinite;
+  animation: move_down 2s ease-in-out infinite;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ------------------------------- ANCHOR Nav ------------------------------- */
+@media (min-width: 992px) {
+  #mainNav .navbar-nav .nav-item .nav-link {
+    color: rgb(22 22 22 / 80%);
+    padding: 10px 2rem;
+    font-size: 16px;
+  }
+  #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link {
+    color: rgb(22 22 22 / 95%);
+  }
+  #mainNav {
+    box-shadow: none;
+    /*    background-color: #bedfeb; */
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 7%);
+   /*  background: linear-gradient(
+      90deg,
+      rgb(190 223 235) 60%,
+      rgb(244 81 30) 100%
+    ) !important; */
+    background-color: #EBF2F6;
+    height: 100px;
+    transition: 0.5s ease-in-out;
+  }
+  header.masthead p {
+    font-size: 1.7rem;
+  }
+  #mainNav.navbar-shrink {
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 7%);
+    /*    background-color: #bedfeb; */
+    padding-top: 6px !important;
+    padding-bottom: 2px !important;
+    height: 75px;
+    transition: 0.5s ease-in-out;
+    background-color: #EBF2F6;
+  }
+
+  #mainNav.navbar-shrink .badge {
+    width: 2.6em;
+    height: 3.8em;
+  }
+}
+#mainNav .navbar-nav .nav-item .nav-link:hover {
+  color: rgb(22 22 22 / 60%) !important;
+}
+.d-f {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.d-f-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.d-f-3 {
+  display: flex;
+  justify-content: flex-start;
+}
+header.masthead h1,
+header.masthead p {
+  color: #222 !important;
+}
+/* ----------------------------- ANCHOR 2nd Hexa ---------------------------- */
+
+.badge {
+  position: relative;
+  margin: 0em 3em;
+  width: 3.4em;
+  height: 5em;
+  border-radius: 10px;
+  display: inline-block;
+  top: 0;
+  transition: all 0.2s ease;
+}
+.badge:before,
+.badge:after {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background: inherit;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.badge:before {
+  transform: rotate(60deg);
+}
+.badge:after {
+  transform: rotate(-60deg);
+}
+
+.badge .ribbon {
+  position: absolute;
+  border-radius: 4px;
+  padding: 5px 5px 4px;
+  width: 100px;
+  z-index: 11;
+  color: #fff;
+  bottom: 9px;
+  left: 50%;
+  margin-left: -52px;
+  height: 22px;
+  font-size: 12px;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 27%);
+  text-shadow: 0 2px 2px rgb(0 0 0 / 10%);
+  text-transform: uppercase;
+  background: linear-gradient(to bottom right, #555 0%, #333 100%);
+  cursor: default;
+}
+
+.orange {
+  background: linear-gradient(to bottom right, #f4511e 0%, #f4511e 100%);
+}
+
+hr.divider {
+  height: 0.2rem;
+  max-width: 3.25rem;
+  margin: 1.5rem 0;
+  background-color: #f4623a;
+  opacity: 1;
+}
+
+header.masthead {
+  padding-top: 10rem;
+  padding-bottom: calc(5rem - 4.5rem);
+  background: linear-gradient(
+      90deg,
+      rgb(255 255 255 / 80%) 30%,
+      rgb(210 210 210 / 80%) 80%
+    ),
+    url(../assets/img/bg-masthead.jpg);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+/* ------------------------------ ANCHOR Footer ----------------------------- */
+footer {
+  margin: 0 0;
+  height: 400px;
+}
+.icon-group{
+  column-count: 15;
+  column-gap: 30px;}
+.icon-group i {
+  font-size: 30px;
+  margin: 20px 30px 20px 0;
+  line-height: 2;
+}
+.icon-group i:hover:nth-child(1) {
+  cursor: pointer;
+}
+.icon-group i:hover:nth-child(2) {
+  cursor: alias;
+}
+.icon-group i:hover:nth-child(3) {
+  cursor: all-scroll;
+}
+.icon-group i:hover:nth-child(4) {
+  cursor: text;
+}
+.icon-group i:hover:nth-child(5) {
+  cursor: grab;
+}
+.icon-group i:hover:nth-child(6) {
+  cursor: wait;
+}
+.icon-group i:hover:nth-child(7) {
+  cursor: zoom-in;
+}
+.icon-group i:hover:nth-child(8) {
+  cursor: zoom-out;
+}
+.icon-group i:hover:nth-child(9) {
+  cursor: not-allowed;
+}
+.icon-group i:hover:nth-child(10) {
+  cursor: cell;
+}
+
+.icon-group i:hover:nth-child(11) {
+cursor: row-resize;
+}
+.icon-group i:hover:nth-child(12) {
+  cursor: crosshair;
+  }
+
+/* --------------------------- ANCHOR Back to top --------------------------- */
+#back-top-top {
+  display: inline-block;
+  background-color: #f4623a;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  color: transparent;
+  border-radius: 50%;
+}
+#back-top-top::after {
+  content: "\f286";
+  font-family: bootstrap-icons !important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.5em;
+  line-height: 50px;
+  color: #fff;
+}
+#back-top-top:hover {
+  cursor: pointer;
+  background-color: #333;
+  border: 0;
+  color: transparent;
+}
+#back-top-top:active {
+  background-color: #555;
+}
+#back-top-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+a#back-to-top:hover {
+  color: #333 !important;
+}
+
+/* Styles for the content section */
+
+@media (min-width: 500px) {
+  #back-top-top {
+    margin: 30px;
+  }
+}
+
+
+
+
+/*-----------Suche-----------*/
+
+#myInput {
+   /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 10px 20px 10px 15px; /* Add some padding */
+  border: 1px solid #ebf2f6; /* Add a grey border */ /* Add some space below the input */
+  width: 180px;
+  margin-left: 45px;
+  outline: none;
+}
+
+#myUL {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6; /* Grey background color */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 18px; /* Increase the font-size */
+  color: black; /* Add a black text color */
+  display: block; /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+
+#myUL li a:focus{outline: none;}
